@@ -101,7 +101,9 @@ app.delete('/all', (req, res)=>{
   } else {
     res
     .status(404)
-    .send("Master key Invalid.");
+    .json({
+      error: "Master key Invalid."
+    });
   }
 })
 
